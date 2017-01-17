@@ -1,0 +1,99 @@
+body {
+  background:#eee;
+}
+footer {
+  overflow: hidden;
+}
+i {
+  color:#6699ff;
+}
+.arrow_box {
+  display:none;
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #6699ff;
+
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 20px;
+	margin-left: -20px;
+}
+.arrow_box:before {
+	border-color: rgba(102, 153, 255, 0);
+	border-top-color: #6699ff;
+	border-width: 23px;
+	margin-left: -23px;
+}
+.arrow_box>ul {
+  border: 2px #6699ff
+}
+.hovertime:hover .arrow_box {
+  display:block;
+  background-color: black;
+  color: 2px #6699ff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index:1;
+}
+ul {
+  color:#6699ff;
+}
+.item-info {
+  border-top: 2px solid #6699ff;
+  color: #6699ff;
+}
+span:last-child{
+  float:right;
+}
+.shirt-container {
+  border: 2px solid #6699ff;
+  margin: 25px auto;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+.shirt-back {
+  border-bottom: 2px solid #6699ff;
+  border-left: 2px solid #6699ff;
+  position: absolute;
+  top:0;
+  right:0;
+}
+.shirt-back:hover {
+  background: #6699ff;
+}
+.value:before {
+  content:'$';
+}
+.shirt img {
+  width:300px;
+  padding: 20px;
+  border-bottom: 2px #6699ff;
+}
+.options div{
+    float: left;
+   padding: 5px;
+   text-align: center;
+   width: 20%;
+   border-right:2px solid #6699ff;
+ }
+.options div:hover{
+  background: #6699ff;
+}
+.options div:last-child{
+  border-right:none;
+}
