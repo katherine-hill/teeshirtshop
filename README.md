@@ -1,2 +1,2 @@
 # teeshirtshop
-https://github.com/katherine-hill/teeshirtshop.git
+https://katherine-hill.github.io/teeshirtshop/
