@@ -1,0 +1,119 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    .tooltiptext {
+        @include bp(mobile) {
+            width: 250%;
+            height: 748%;
+            bottom: 120%;
+            margin-bottom: 6px;
+        }
+        @include bp(small) {
+            width: 250%;
+            height: 748%;
+            bottom: 120%;
+            margin-bottom: 6px;
+        }
+        @include bp(medium) {
+            width: 300%;
+            height: 748%;
+            bottom: 100%;
+            margin-bottom: 3px;
+        }
+        visibility: hidden;
+        background-color: #fff;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-top: $borderStyle;
+        border-left: $borderStyle;
+        border-right: $borderStyle;
+        position: absolute;
+        z-index: 1;
+        bottom: 120%;
+        left: 50%;
+        margin-left: -27px;
+        opacity: 0;
+        transition: opacity 1s;
+        display: flex;
+        flex-direction: column;
+        padding: 1% auto;
+    }
+
+    .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    &:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+
+    .tooltiptext2 {
+        @include bp(mobile) {
+            bottom: 130%;
+            margin-bottom: 5px;
+        }
+        @include bp(small) {
+            bottom: 120%;
+            margin-bottom: 4px;
+            width: 70px;
+            height: 80px;
+        }
+        @include bp(medium) {
+            bottom: 122%;
+            margin-bottom: 5px;
+        }
+        @include bp(large) {
+            bottom: 122%;
+            margin-bottom: 5px;
+        }
+        visibility: hidden;
+        width: 90px;
+        height: 90px;
+        background-color: #fff;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-top: $borderStyle;
+        border-left: $borderStyle;
+        border-right: $borderStyle;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        margin-left: -45px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .tooltiptext2::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    &:hover .tooltiptext2 {
+        visibility: visible;
+        opacity: 1;
+        margin-right: 10%;
+        padding-right: 5%;
+    }
+}

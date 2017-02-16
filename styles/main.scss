@@ -1,0 +1,117 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/tooltip";
+
+.total-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    .total-tee-container {
+        @include bp(mobile) {
+            width: 80%;
+            margin: 5% auto;
+        }
+        @include bp(small) {
+            width: 40%;
+            margin: 3% auto;
+        }
+        @include bp(medium) {
+            width: 30%;
+            margin: 2% auto;
+        }
+        @include bp(large) {
+            width: 20%;
+            margin: 2%;
+        }
+
+        .tee-container {
+            border: $borderStyle;
+            overflow: hidden;
+
+            .fa-arrow-circle-o-right {
+                color: $borderBlue;
+                float: right;
+                font-size: 1.5rem;
+                border-bottom: $borderStyle;
+                border-left: $borderStyle;
+                padding: 1% 2%;
+
+                &:hover {
+                    background: $borderBlue;
+                    color: white;
+                }
+            }
+
+            .tee {
+                img {
+                    padding: 5%;
+                }
+                width: 100%;
+            }
+
+            .icons {
+                border-top: $borderStyle;
+                text-align: center;
+
+                li {
+                    border-right: $borderStyle;
+                    color: $borderBlue;
+                    padding: 3% 0;
+                    float: left;
+                    width: 20%;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    &:hover {
+                        background: $borderBlue;
+                        color: white;
+                    }
+
+                    .tooltiptext li {
+                        border-right: none;
+                        width: 100%;
+                        padding: 4%;
+                    }
+
+                    .tooltiptext2 li {
+                        display: flex;
+                        flex-direction: column;
+                        align-content: space-around;
+                        flex-wrap: wrap;
+                        padding: 5%;
+                        border-right: none;
+                        font-size: 2rem;
+                        width: 50%;
+                    }
+
+                    .pinksquare {
+                        color: $pinkShirt;
+                    }
+
+                    .greensquare {
+                        color: $greenShirt;
+                    }
+
+                    .yellowsquare {
+                        color: $yellowShirt;
+                    }
+                }
+            }
+        }
+
+        .name-price {
+            width: 100%;
+            margin-top: 1%;
+            color: $borderBlue;
+            font-size: 1rem;
+
+            .price {
+                padding-left: 35%;
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
